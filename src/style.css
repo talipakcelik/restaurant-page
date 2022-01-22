@@ -89,3 +89,60 @@ p {
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
 }
+
+/* menu.js */
+.meal-container {
+  max-width: 80rem;
+  display: grid;
+  gap: 9.6rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 6rem auto 0 auto;
+  padding: 0 3.2rem;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(240, 235, 235, 0.205);
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.meal-content {
+  padding: 1.2rem 4.8rem 4.8rem 4.8rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: rosybrown; */
+}
+.tag {
+  display: inline-block; /* for padding */
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 10rem;
+  color: #333;
+  background-color: rosybrown;
+  font-weight: 600;
+}
+
+.meal-img {
+  width: 100%;
+  display: block;
+  /* border-top-left-radius: 11px;
+  border-top-right-radius: 11px; */
+}
+
+.meal-title-1 {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-atts {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-att {
+  font-size: 1.8rem;
+}
