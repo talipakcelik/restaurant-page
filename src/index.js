@@ -13,7 +13,6 @@ document.body.addEventListener("click", function (e) {
     e.target.classList.contains("home") &&
     !document.body.querySelector(".text-container")
   ) {
-    console.log("homee");
     content.remove();
     document.body.append(homeCreator());
     e.target.style.backgroundColor = "red";
@@ -22,7 +21,6 @@ document.body.addEventListener("click", function (e) {
     !document.body.querySelector(".meal-container")
   ) {
     content.remove();
-    console.log("13123");
     document.body.append(menuCreator());
     e.target.style.backgroundColor = "red";
   } else if (e.target.classList.contains("contact")) {
