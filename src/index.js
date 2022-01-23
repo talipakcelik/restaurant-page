@@ -1,20 +1,33 @@
-// import { first } from "./home";
 import style from "./style.css";
-// import image from "./tpizza-1.jpg";
+//////
+import homeCreator from "./home";
+import menuCreator from "./menu";
+import contactCreator from "./contact";
+//////
 
-import home from "./home";
-import menu from "./menu";
+document.body.append(homeCreator());
 
-home();
-
-document.body.append(home());
-
-const homeTab = document.querySelector(".home");
-const menuTab = document.querySelector(".menu");
-const contactTab = document.querySelector(".contact");
-const textDiv = document.querySelector(".text-container");
-
-menuTab.addEventListener("click", function () {
-  textDiv.remove();
-  if (!denden.textContent === "zaaa") document.body.append(menu());
+document.body.addEventListener("click", function (e) {
+  const content = document.getElementById("content");
+  if (
+    e.target.classList.contains("home") &&
+    !document.body.querySelector(".text-container")
+  ) {
+    console.log("homee");
+    content.remove();
+    document.body.append(homeCreator());
+    e.target.style.backgroundColor = "red";
+  } else if (
+    e.target.classList.contains("menu") &&
+    !document.body.querySelector(".meal-container")
+  ) {
+    content.remove();
+    console.log("13123");
+    document.body.append(menuCreator());
+    e.target.style.backgroundColor = "red";
+  } else if (e.target.classList.contains("contact")) {
+    content.remove();
+    document.body.append(contactCreator());
+    e.target.style.backgroundColor = "red";
+  }
 });
