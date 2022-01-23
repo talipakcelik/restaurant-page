@@ -1,7 +1,7 @@
 import lahmacunImg from "./lahmacun.jpg";
 import pideImg from "./pide.jpg";
 
-function menu() {
+function menuCreator() {
   const content = document.createElement("div");
   content.setAttribute("id", "content");
 
@@ -64,13 +64,13 @@ function menu() {
   mealAtts2.classList.add("meal-atts");
   const mealAtt12 = document.createElement("li");
   mealAtt12.classList.add("meal-att");
-  mealAtt12.textContent = "Beef Cubes";
+  mealAtt12.textContent = "Flat Bread";
   const mealAtt22 = document.createElement("li");
   mealAtt22.classList.add("meal-att");
-  mealAtt22.textContent = "Fresh Tomato";
+  mealAtt22.textContent = "Beef Cubes";
   const mealAtt32 = document.createElement("li");
   mealAtt32.classList.add("meal-att");
-  mealAtt32.textContent = "Green Peppers";
+  mealAtt32.textContent = "Green Peppers & Tomato";
 
   ///
   content.append(header);
@@ -82,8 +82,8 @@ function menu() {
   mealContainer.append(meal);
   meal.append(lahmacun);
   meal.append(mealContent);
-  mealContent.append(mealTag);
   mealContent.append(mealTitle);
+  mealContent.append(mealTag);
   mealContent.append(mealAtts);
   mealAtts.append(mealAtt1);
   mealAtts.append(mealAtt2);
@@ -92,14 +92,16 @@ function menu() {
   mealContainer.append(meal2);
   meal2.append(pide);
   meal2.append(mealContent2);
-  mealContent2.append(mealTag2);
   mealContent2.append(mealTitle2);
+  mealContent2.append(mealTag2);
   mealContent2.append(mealAtts2);
   mealAtts2.append(mealAtt12);
   mealAtts2.append(mealAtt22);
   mealAtts2.append(mealAtt32);
 
+  menu.style.backgroundColor = "#ffa8a8";
+  menu.style.color = "#333";
   return content;
 }
 
-export default menu;
+export default menuCreator;
